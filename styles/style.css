@@ -1,0 +1,212 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+ }
+
+ body{
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .main{
+    background-color: hsl(216, 50%, 16%);
+    max-width:320px ;
+    border-radius: 10px;
+ }
+
+ .content{
+    padding: 24px;
+}
+
+
+ 
+
+
+
+ .main-title{
+    color: hsl(0, 0%, 100%);
+    font-size: 1.375em;
+    
+ }
+
+ .main-title:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+    
+ }
+
+ .main-p{
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+ }
+
+
+ .little-content{
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .left-content, .right-content{
+    
+    display: flex;
+   
+ }
+
+ .left-p , .right-p{
+   margin-left: 5px;
+
+ }
+
+ .left-p{
+    color:hsl(178, 100%, 50%) ;
+ }
+
+ .right-p{
+    color: hsl(215, 51%, 70%);
+ }
+
+.hr-style{
+    border-width: 1px;
+}
+
+.line{
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+
+.avatar-img{
+    width: 10%;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+
+
+
+.created-by-footer{
+    display: flex;
+     align-items: center;
+}
+
+.last-p{
+    color: hsl(215, 51%, 70%);
+    padding-left: 15px;
+}
+
+.full-name{
+    color: hsl(0, 0%, 100%);
+}
+.full-name:hover{
+    color:hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    .main{
+        max-width: 350px;
+    }
+}
+.main-image{
+   height: 100%;
+   max-width: 100%;
+   object-fit: contain;
+   border-radius: 10px;
+   cursor: pointer;
+   display: block;
+   
+}
+
+
+.overlay{
+   display: block;
+   position: relative;
+   max-width: 100%;
+   display: flex;
+   
+   transition: ease 0.5s;
+}
+
+.overlay::after{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   content: '';
+   background-color: hsl(178, 100%, 50%);
+   opacity: 0;
+   border-radius: 10px;
+   transition: opacity 200ms ease-in;
+
+}
+
+.overlay::before{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+
+   
+   content: '';
+   background-image: url(../images/icon-view.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+   z-index: 1;
+   opacity: 0;
+   border-radius: 10px;
+  
+   
+   
+   transition: opacity 200ms ease-in;
+  
+   
+}
+
+.overlay:hover::after{
+   opacity: 0.7;
+   
+}
+
+.overlay:hover::before{
+   opacity: 1;
+}
